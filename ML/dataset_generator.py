@@ -3,6 +3,7 @@ from random import randint
 import numpy
 
 labels = ['finance', 'marketing', 'innovation']
+output_name = 'train_dataset.csv'
 row_number = 1000
 category_number = len(labels)
 questions_per_category = 5
@@ -38,7 +39,7 @@ def label_answer(answer, labels, input_length):
 
 if __name__ == "__main__":
     header = header_generator(category_number=category_number, questions_per_category=questions_per_category)
-    with open('dataset.csv', 'w') as csvfile:
+    with open(output_name, 'w') as csvfile:
         writer = csv.writer(csvfile,lineterminator='\n')
         writer.writerow(header)
         for _ in range(row_number):
