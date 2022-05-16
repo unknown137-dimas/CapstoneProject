@@ -6,7 +6,7 @@ labels = ['finance', 'marketing', 'innovation']
 output_name = 'train_dataset.csv'
 row_number = 1000
 category_number = len(labels)
-questions_per_category = 5
+questions_per_category = 3
 input_length = category_number * questions_per_category
 
 def random_values():
