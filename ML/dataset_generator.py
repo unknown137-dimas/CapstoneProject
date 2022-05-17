@@ -3,7 +3,7 @@ from random import randint
 import numpy
 
 labels = ['finance', 'marketing', 'innovation']
-output_name = 'train_dataset.csv'
+output_name = '_dataset.csv'
 row_number = 1000
 category_number = len(labels)
 questions_per_category = 3
@@ -11,7 +11,7 @@ input_length = category_number * questions_per_category
 
 def random_values():
     '''Generate random values'''
-    value = randint(1, 5)
+    value = randint(3, 5)
     return value
 
 def random_answer(input_length):
@@ -34,7 +34,7 @@ def label_answer(answer, labels, input_length):
     '''Return label based on the answers'''
     sum = []
     for i in range(0,input_length-1,questions_per_category):
-        sum.append(numpy.sum(answer[i:i+2]))
+        sum.append(numpy.sum(answer[i:i+questions_per_category]))
     return labels[numpy.argmin(sum)]
 
 if __name__ == "__main__":
