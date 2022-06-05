@@ -21,36 +21,36 @@ In Indonesia, there are a lot of small businesses that still encounter difficult
 ## Create the Docker Image for Deployment
 1. First, clone this repository
    
-    ```git clone https://github.com/unknown137-dimas/CapstoneProject.git```
+    >git clone https://github.com/unknown137-dimas/CapstoneProject.git
 
 2. Switch to repository's directory
    
-    ```cd CapstoneProject```
+    >cd CapstoneProject
 
 3. Run a serving image as a daemon:
    
-   ```docker run -d --name serving_base tensorflow/serving```
+   >docker run -d --name serving_base tensorflow/serving
 
 4. Next, copy your SavedModel to the container's model folder:
    
-   ```docker cp ML/savedModel/dataset_model serving_base:/models/dataset_model/1```
+   >docker cp ML/savedModel/dataset_model serving_base:/models/dataset_model/1
    
 5. Finally, commit the container that's serving your model by changing MODEL_NAME to match your model's name:
 
-    ```docker commit --change "ENV MODEL_NAME dataset_model" serving_base ml_model```
+    >docker commit --change "ENV MODEL_NAME dataset_model" serving_base ml_model
 
 6. You can now stop serving_base
    
-   ```docker kill serving_base```
+   >docker kill serving_base
 
 7. This will leave you with a Docker image called ```ml_model``` that you can deploy and will load the model for serving on startup.
 
 ## Deploy the Docker Image in Google Cloud Platform
 1. First, tag the created docker image:
 
-    ```docker tag ml_model gcr.io/<PROJECT-ID>/ml_model```
+    >docker tag ml_model gcr.io/\<PROJECT-ID>/ml_model
 
 2. Push the tagged docker image to Google Cloud Hub:
 
-    ```docker push gcr.io/<PROJECT-ID>/ml_model```
+    >docker push gcr.io/\<PROJECT-ID>/ml_model
 
