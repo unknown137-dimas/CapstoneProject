@@ -1,3 +1,5 @@
+<h1>Endpoint</h1>
+<p><a href="https://bantuaku-7oecrdtofa-uc.a.run.app" target="_blank" rel="noopener">https://bantuaku-7oecrdtofa-uc.a.run.app/</a></p>
 <h1>User Register</h1>
 <ul>
 	<li>URL
