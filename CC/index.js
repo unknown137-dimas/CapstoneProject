@@ -3,10 +3,12 @@ const app = express();
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const cors = require("cors");
+const Firestore = require("@google-cloud/firestore);
 dotenv.config();
 
 //DB connection
 mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true }, () => console.log("connected to DB"));
+const db = new Firestore();
 
 //Routes
 const auth_route = require("./routes/auth");
