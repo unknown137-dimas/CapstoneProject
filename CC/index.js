@@ -23,7 +23,7 @@ const booking_route = require("./routes/booking");
 app.use(cors());
 app.use(express.json());
 
-app.get('/', (req, res) => res.send('api/mentor to access mentor | api/video to access video'));
+app.get('/', (req, res) => res.send('Please input specific endpoint'));
 
 //Route middleware
 app.use("/api/user", auth_route);
