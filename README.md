@@ -78,3 +78,7 @@ In Indonesia, there are a lot of small businesses that still encounter difficult
 
 3. Create instance in the Google Cloud Platform
 
+## Cloud Computing Deployment
+1. For cloud computing deployment, please refer to this [README.md](https://github.com/unknown137-dimas/CapstoneProject/blob/master/CC/README.md)
+
+2. For API documentation, please refer to this [API Documentation](https://github.com/unknown137-dimas/CapstoneProject/blob/master/CC/api_documentation.md)
