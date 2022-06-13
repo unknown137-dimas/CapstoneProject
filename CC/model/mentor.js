@@ -7,23 +7,27 @@ const MentorSchema = new mongoose.Schema({
     min: 6,
     max: 255,
   },
-  email: {
-    type: String,
-    required: true,
-    min: 6,
-    max: 255,
-  },
-  password: {
-    type: String,
-    required: true,
-    min: 6,
-    max: 1024,
-  },
   expertise: {
     type: String,
     required: true,
     min: 1,
   },
+  price: {
+    type: Number,
+    required: true,
+  },
+  video:[{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Video'
+  }],
+  mentee:[{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'user'
+  }],
+  session:[{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Session'
+  }],
   date: {
     type: Date,
     default: Date.now,

@@ -1,0 +1,18 @@
+https://medium.com/bb-tutorials-and-thoughts/how-to-run-nodejs-apis-on-gcp-cloud-run-7cd9f3bc5600
+https://github.com/bbachi/prod-ready-node-rest-api
+
+1. clone repo "git clone ..."
+
+2. npm install in terminal
+
+3. npm start (test)
+
+4. Create Dockerfile
+
+5. Build Docker
+
+6. Tag Docker
+
+7. Push Docker
+
+8. Create Cloud Run Sevice
